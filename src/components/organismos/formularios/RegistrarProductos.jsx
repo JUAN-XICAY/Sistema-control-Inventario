@@ -217,7 +217,7 @@ export function RegistrarProductos({ onClose, dataSelect, accion, setIsExploding
                   type="number"
                   placeholder=""
                   {...register("codigobarras", {
-                    required: true,
+                    required: false,
                   })}
                 />
                 <label className="form__label">codigo de barras</label>
