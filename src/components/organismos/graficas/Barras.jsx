@@ -78,63 +78,41 @@ export function Barras() {
 }
 
 const Container = styled.div`
-  display: flex;
+  /* display: flex; */
   position: relative;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 80vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  margin-bottom: 40px;
-  /* background-color: rgba(225, 108, 50, 0.3); */
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-  @media ${Device.mobile} {
-    flex-direction: row;
-    flex-wrap: wrap;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 85vw;
-  }
-  @media ${Device.laptop} {
-    flex-direction: row;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 85vw;
-  }
-  @media ${Device.tablet} {
-    flex-direction: row;
-    overflow-y: auto;
-    overflow-x: hidden;
-    width: 85vw;
-  }
-
-  &::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 10px;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: #484848;
-    border-radius: 10px;
-  }
   .content-grafica {
-    margin-top: 50px;
     display: flex;
     flex-direction: column;
-    width: 85vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
-    gap: 40px;
-    /* background-color: rgba(89, 232, 87, 0.5); */
+    gap: 2em;
+    width: 100%;
+
+    @media (min-width: ${Device.tablet}) {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 1.5em;
+    }
 
     .card-grafica {
-      display: flex;
-      width: 85vw;
-      height: 50vh;
-      justify-content: center;
-      align-items: center;
-      /* margin: 20px 20px; */
+      width: 100%;
+      padding: 1em;
+      background-color: ${(props) => props.theme.bgtotal};
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+
+      @media (min-width: ${Device.tablet}) {
+        width: 48%;
+      }
+
+      canvas {
+        width: 100% !important;
+        height: 100% !important;
+      }
     }
   }
 `;
