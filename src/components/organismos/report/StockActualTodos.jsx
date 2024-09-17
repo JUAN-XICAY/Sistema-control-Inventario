@@ -40,7 +40,7 @@ function StockActualTodos() {
     cell: {
       flex: 1,
       textAlign: "center",
-    //   fontFamily: "Inconsolata",
+      //   fontFamily: "Inconsolata",
       borderLeftColor: "#000",
       justifyContent: "flex-start",
       alignItems: "center",
@@ -50,12 +50,17 @@ function StockActualTodos() {
       flex: 1,
       backgroundColor: "#dcdcdc",
       fontWeight: "bold",
-    //   fontFamily: "Inconsolata",
+      //   fontFamily: "Inconsolata",
       textAlign: "left",
       justifyContent: "flex-start",
       alignItems: "center",
       textAlign: "center",
       fontSize: 14,//
+    },
+    body: {
+      paddingTop: 20,
+      paddingBottom: 25,
+      paddingHorizontal: 25,
     },
   });
 
@@ -85,7 +90,7 @@ function StockActualTodos() {
     <Container>
       <PDFViewer className="pdfviewer">
         <Document title="Reporte de Stock todos">
-          <Page size="A4" orientation="landscape">
+          <Page style={styles.body} size="A4" orientation="landscape">
             <View style={styles.page}>
               <View style={styles.section}>
                 <Text

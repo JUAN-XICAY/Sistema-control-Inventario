@@ -61,6 +61,11 @@ function ReporteKardexProducto() {
       textAlign: "center",
       fontSize: 14, //
     },
+    body: {
+      paddingTop: 35,
+      paddingBottom: 65,
+      paddingHorizontal: 35,
+    },
   });
 
   const currentDate = new Date();
@@ -89,7 +94,7 @@ function ReporteKardexProducto() {
     <Container>
       <PDFViewer className="pdfviewer">
         <Document title="Reporte de Kardex Productos">
-          <Page size="A4" orientation="landscape">
+          <Page style={styles.body} size="A4" orientation="landscape">
             <View style={styles.page}>
               <View style={styles.section}>
                 <Text

@@ -43,7 +43,7 @@ function StockInventarioValoradoVenta() {
     cell: {
       flex: 1,
       textAlign: "center",
-    //   fontFamily: "Inconsolata",
+      //   fontFamily: "Inconsolata",
       borderLeftColor: "#000",
       justifyContent: "flex-start",
       alignItems: "center",
@@ -53,12 +53,17 @@ function StockInventarioValoradoVenta() {
       flex: 1,
       backgroundColor: "#dcdcdc",
       fontWeight: "bold",
-    //   fontFamily: "Inconsolata",
+      //   fontFamily: "Inconsolata",
       textAlign: "left",
       justifyContent: "flex-start",
       alignItems: "center",
       textAlign: "center",
       fontSize: 14,//
+    },
+    body: {
+      paddingTop: 35,
+      paddingBottom: 65,
+      paddingHorizontal: 35,
     },
   });
 
@@ -88,7 +93,7 @@ function StockInventarioValoradoVenta() {
     <Container>
       <PDFViewer className="pdfviewer">
         <Document title="Reporte de Inventario - Valorado Precio de Venta">
-          <Page size="A4" orientation="portrait">
+          <Page style={styles.body} size="A4" orientation="landscape">
             <View style={styles.page}>
               <View style={styles.section}>
                 <Text
